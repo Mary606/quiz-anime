@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+.root {
+  --color-fist: #e6e6ec;
+  --backgroud-inicio: #030a4d;
+  --cor-animação: #7272cc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+}
+body {
+  color: #e6e6ec;
+  background-color: #07010c;
+  overflow: hidden;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 15%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.logo {
+  font-size: 25px;
+  color: #e6e6ec;
+  text-decoration: none;
+  font-weight: 500;
+  filter: drop-shadow(0 0 0 #0e0e32);
+}
+.nav a {
+  font-size: 15px;
+  color: #e6e6ec;
+  text-decoration: none;
+  font-weight: 400;
+  margin-left: 40px;
+  transition: 0.5s;
+}
+.nav .atual {
+  color: #c76ffb;
+}
+.nav a:hover {
+  color: #623cb8;
+}
+
+.inicio {
+  min-height: 100vh;
+  background: url(./img/teste3.jfif) no-repeat;
+  background-size: cover;
+  pointer-events: auto;
+  background-position: center;
+  transition: 0.3s ease;
+}
+.inicio.active {
+  filter: blur(10px);
+  pointer-events: none;
+}
+.container {
+  display: flex;
+  height: 100vh;
+  width: 200%;
+}
+.principal {
+  position: relative;
+  left: -50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tela {
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.tela h1 {
+  font-size: 60px;
+  color: #fff;
+  font-weight: 800;
+  text-shadow: 0 0 15px #07010c;
+  margin-bottom: 30px;
+}
+.tela p {
+  font-size: 16px;
+  text-align: center;
+  color: #cbc7f3;
+  text-shadow: 0 0 5px #352b71;
+  margin-bottom: 20px;
+}
+.tela .comecar {
+  width: 150px;
+  height: 45px;
+  background: #990ca0;
+  border: 2px solid #730a78;
+  border-radius: 5px;
+  color: #d3b2d3;
+  box-shadow: 0 0 10px #07010c;
+  outline: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.2s;
+  letter-spacing: 1px;
+}
+.comecar:hover {
+  transition-duration: 0.1s;
+  background-color: transparent;
+  border: 2px solid #58095c;
+  box-shadow: none;
+  color: #07010c;
+}
+.info-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  width: 400px;
+  background: #d3b2d3;
+  border-radius: 5px;
+  border: 2px solid #352b71;
+  box-shadow: 0 0 10px #07010c;
+  padding: 10px 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s ease;
+}
+.info-box.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+.info-box h2 {
+  font-size: 45px;
+  font-weight: 700;
+  color: #58095c;
+  text-shadow: 0 0 2px #300632;
+}
+.info-box .info {
+  display: inline-block;
+  font-size: 15px;
+  color: #07010c;
+  font-weight: 400;
+  margin: 6px 0 4px;
+}
+.info strong {
+  color: #300632;
+}
+.info-box .sair {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 10px;
+  padding: 10px 0 10px;
+  margin: 0 15x;
+}
+.info-box .sair .botao-clique {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  background: #787dae;
+  border: 2px solid #07010c;
+  outline: none;
+  border-radius: 4px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #2a022c;
+  font-weight: 500;
+  box-shadow: 0 0 5px #07010c;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.info-box .sair .botao-clique:nth-child(1) {
+  background: transparent;
+  color: #170b36;
+}
+.info-box .sair .botao-clique:nth-child(1):hover {
+  background: #371c78;
+  color: #a5b5c4;
+}
+.info-box .sair .botao-clique:nth-child(2) {
+  background: #840d8a;
+  border-color: #840d8a;
+  color: #cbc7f3;
+}
+.quiz {
+  position: relative;
+  left: -50%;
+  width: 100%;
+  background-image: url("./img/teste2.gif");
+  background-size: cover;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.9s ease-in-out;
+  transition-delay: 0.15s;
+}
+.quiz.active {
+  left: 0;
+}
+.quiz .quiz-secao {
+  position: relative;
+  width: 400px;
+  background: transparent;
+  border: 2px solid #730a78;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 10px;
+}
+.quiz-secao h1 {
+  font-size: 28px;
+  font-weight: 400;
+  text-align: center;
+  background: linear-gradient(30deg, transparent, #623cb8, transparent);
+}
+.quiz-secao img {
+  display: block;
+  width: 250px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #07010c;
+  margin-top: 5px;
+}
+.quiz-secao .quiz-cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 2px solid #58095c;
+}
+.quiz-secao span {
+  font-size: 14px;
+  font-weight: 600;
+  text-shadow: #07010c;
+}
+.quiz-secao .pontuacao {
+  background: #352b71;
+  border-radius: 4px;
+  box-shadow: 0 0 5px #07010c;
+  padding: 5px;
+}
+.quiz-secao .perguntas {
+  color: #e6e6ec;
+  text-shadow: #07010c;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.lista-opcoes .opcoes {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  margin: 5px 0;
+  cursor: pointer;
+}
+.lista-opcoes .opcoes:hover {
+  background: rgba(160, 32, 240, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.quiz .quiz-fot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+.quiz-fot .totalstatus {
+  font-size: 12px;
+  font-weight: 600;
+  text-shadow: #07010c;
+}
+.quiz-fot .proximo {
+  width: 80px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  outline: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #e6e6ec;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.quiz-fot .proximo:hover {
+  background: rgba(160, 32, 240, 0.1);
+}
