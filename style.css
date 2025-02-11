@@ -196,7 +196,7 @@ body {
   position: relative;
   left: -50%;
   width: 100%;
-  background-image: url("./img/teste2.gif");
+  background-image: url("./img/gif2.gif");
   background-size: cover;
   z-index: 100;
   display: flex;
@@ -217,6 +217,15 @@ body {
   display: flex;
   flex-direction: column;
   padding: 15px 10px;
+  pointer-events: none;
+  transform: scale(0.8);
+}
+.quiz .quiz-secao.active{
+  pointer-events: auto;
+  transform: scale(1);
+  transition: 1s ease;
+  transition-delay: 1s;
+
 }
 .quiz-secao h1 {
   font-size: 28px;
@@ -277,6 +286,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-top: 10px;
+  
 }
 .quiz-fot .totalstatus {
   font-size: 12px;
